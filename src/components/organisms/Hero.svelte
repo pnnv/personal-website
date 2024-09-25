@@ -56,7 +56,7 @@
 	}
 
 	h1::before {
-		@include outlineText($content: '///', $translateX: -95%, $letterSpacing: -0.1em);
+		@include outlineText($content: 'pranav', $translateX: -69%, $letterSpacing: -0.1em);
 	}
 
 	@media screen and (max-width: 1240px) {

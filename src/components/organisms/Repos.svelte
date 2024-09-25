@@ -1,67 +1,74 @@
 <script>
 	import { OpenNewWindowIcon } from '@indaco/svelte-iconoir/open-new-window';
-  
+
 	let profiles = [
-	  {
-		platform: 'CodeForces',
-		link: 'https://codeforces.com/profile/pruh',
-		username: 'pruh',
-		logo: 'https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg'
-	  },
-	  {
-		platform: 'CodeForces',
-		link: 'https://codeforces.com/profile/pnus',
-		username: 'pnus',
-		logo: 'https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg'
-	  },
-	  {
-      platform: 'CodeChef',
-      link: 'https://www.codechef.com/users/pruh',
-      username: 'pruh',
-      logo: 'https://img.icons8.com/?size=100&id=O4SEeX66BY8o&format=png&color=000000' 
-    },
-	  {
-		platform: 'AtCoder',
-		link: 'https://atcoder.jp/users/pruh',
-		username: 'pruh',
-		// Corrected AtCoder logo:
-		logo: 'https://img.atcoder.jp/assets/atcoder.png' 
-	  },
-	  {
-		platform: 'Leetcode',
-		link: 'https://leetcode.com/u/pruh/',
-		username: 'pruh',
-		logo: 'https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg'
-	  }
+		{
+			platform: 'CodeForces',
+			link: 'https://codeforces.com/profile/pruh',
+			username: 'pruh',
+			logo: 'https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg',
+			rating: 1450 // Hardcoded rating
+		},
+		{
+			platform: 'CodeForces',
+			link: 'https://codeforces.com/profile/pnus',
+			username: 'pnus',
+			logo: 'https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg',
+			rating: 1300 // Hardcoded rating
+		},
+		{
+			platform: 'CodeChef',
+			link: 'https://www.codechef.com/users/pruh',
+			username: 'pruh',
+			logo: 'https://img.icons8.com/?size=100&id=O4SEeX66BY8o&format=png&color=000000',
+			rating: 1600 // Hardcoded rating
+		},
+		{
+			platform: 'AtCoder',
+			link: 'https://atcoder.jp/users/pruh',
+			username: 'pruh',
+			logo: 'https://img.atcoder.jp/assets/atcoder.png',
+			rating: 1200 // Hardcoded rating
+		},
+		{
+			platform: 'Leetcode',
+			link: 'https://leetcode.com/u/pruh/',
+			username: 'pruh',
+			logo: 'https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg',
+			rating: 1500 // Hardcoded rating
+		}
 	];
-  </script>
-  
-  <section class="wrapper" id="code">
+</script>
+
+<section class="wrapper" id="code">
 	<div class="title">
-	  <h2><span>coding</span>:profiles</h2>
+		<h2>
+			<span>coding</span>:profiles
+		</h2>
 	</div>
 	<div class="grid">
-	  {#each profiles as { link, username, platform, logo }}
-		<a href={link} target="_blank" rel="noreferrer">
-		  <div class="profile-card">
-			<img src={logo} alt={platform} id="logo" />
-			<div id="top-part">
-			  <div class="info">
-				<h6>{platform}</h6>
-			  </div>
-			  <div id="open">
-				<OpenNewWindowIcon color="var(--text-secondary)" size="20px" />
-			  </div>
-			</div>
-			<div>
-			  <h3>{username}</h3>
-			</div>
-		  </div>
-		</a>
-	  {/each}
+		{#each profiles as { link, username, platform, logo, rating }}
+			<a href={link} target="_blank" rel="noreferrer">
+				<div class="profile-card">
+					<img src={logo} alt={platform} id="logo" />
+					<div id="top-part">
+						<div class="info">
+							<h6>{platform}</h6>
+						</div>
+						<div id="open">
+							<OpenNewWindowIcon color="var(--text-secondary)" size="20px" />
+						</div>
+					</div>
+					<div>
+						<h3>{username}</h3>
+						<!-- <p>Rating: {rating}</p>  -->
+					</div>
+				</div>
+			</a>
+		{/each}
 	</div>
-  </section>
-  
+</section>
+
   <style lang="scss">
 	@import '../../styles/mixins.scss';
   
