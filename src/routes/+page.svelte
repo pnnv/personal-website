@@ -11,9 +11,9 @@
 <NavHost />
 <main>
 	<Hero />
-	<!-- <About /> -->
 	<!-- <Art /> -->
 	<Repos />
+	<About />
 	<!-- <Supporters /> -->
 	<Footer />
 </main>

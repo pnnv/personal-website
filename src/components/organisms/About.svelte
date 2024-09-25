@@ -4,7 +4,7 @@
 
 	// i didnt write this idk
 	let getAge = () => {
-		let birthDate = new Date('2007/03/24');
+		let birthDate = new Date('2003/07/07');
 		const ageMs = Date.now() - birthDate.getTime();
 		const preciseAge = (ageMs / 31536000000).toFixed(10);
 		return preciseAge;
@@ -23,7 +23,7 @@
 	<div class="text">
 		<h2>bio</h2>
 		<p>
-			Hey, I'm Prahlad Khairnar, a student at NIT Raipur. I have a strong passion for problem-solving and competitive programming, and I'm always up for a new challenge. I also have a keen interest in Linux, which fuels my enthusiasm for open-source technologies. Although I'm new to web development, I'm eager to learn and explore this exciting field.
+			Hey! I'm Prahlad (or pranav), currently in my third year at NIT Raipur. I'm really into problem-solving and competitive programming, and I love the challenge of turning complex problems into elegant solutions.  When I need a break from the code, you'll usually find me with my nose in a book, catching up on sleep, or enjoying a good cup of coffee. I'm also exploring the world of web development and having fun learning how to build cool websites.  Nice to meet you :3
 		</p>
 	</div>
 </section>
@@ -61,7 +61,7 @@
 
 	.text::before {
 		@include outlineText(
-			$content: 'afn',
+			$content: ':p',
 			$translateX: 97%,
 			$translateY: -5%,
 			$fontSize: 300px,
